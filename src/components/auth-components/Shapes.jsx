@@ -17,6 +17,7 @@ const shapesStyles = StyleSheet.create({
         height: 110,
         position: "absolute",
         right: 0,
+        top: 0,
         objectFit: "cover",
         zIndex: 250
     },
