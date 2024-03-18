@@ -1,11 +1,11 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, { Fragment } from 'react';
+import AppNavigation from './src/routes/AppNavigation';
 
 const App = () => {
   return (
-    <View>
-      <Text> Hello world</Text>
-    </View>
+    <Fragment>
+      <AppNavigation />
+    </Fragment>
   );
 };
 
