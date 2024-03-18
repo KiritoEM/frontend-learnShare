@@ -20,7 +20,7 @@ const Welcoming = () => {
                     <LottieView source={require('./../../assets/Animation - 1710688901899.json')} style={welcomingStyles.lottie} autoPlay />
                 </View>
                 <View style={welcomingStyles.header}>
-                    <Text style={{ fontSize: 26, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
+                    <Text style={{ fontSize: 24.3, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
                     <Text style={welcomingStyles.subHeaderText}>Découvrez une nouvelle ère d'apprentissage avec notre plateforme éducative en ligne</Text>
                     <TouchableOpacity style={welcomingStyles.button}>
                         <Text style={welcomingStyles.buttonText}>Commencer à apprendre</Text>
@@ -42,7 +42,7 @@ const welcomingStyles = StyleSheet.create({
         gap: 20
     },
     lottie: {
-        height: 320,
+        height: 305,
         objectFit: "contain"
     },
     header: {
@@ -63,14 +63,14 @@ const welcomingStyles = StyleSheet.create({
         alignItems: "center",
         flexDirection: "row",
         justifyContent: "center",
-        height: 50.6,
+        height: 48,
         borderRadius: 10
     },
     buttonText: {
         color: "#000000",
-        fontSize: 13.5,
+        fontSize: 13,
         textAlign: "center",
-        fontFamily: "Montserrat_500Medium",
+        fontFamily: "Montserrat_600SemiBold",
     },
 
 })
