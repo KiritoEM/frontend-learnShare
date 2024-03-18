@@ -1,10 +1,11 @@
 import React from 'react';
+import { Text, View } from 'react-native';
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <View>
+      <Text> Hello world</Text>
+    </View>
   );
 };
 
