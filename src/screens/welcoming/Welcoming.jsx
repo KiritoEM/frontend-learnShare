@@ -9,7 +9,7 @@ const Welcoming = () => {
         Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold
     });
 
-    const { blue } = colors();
+    const { blue, gray_01 } = colors();
 
     if (!fontsLoaded) {
         return <Text>Loading...</Text>;
@@ -22,7 +22,8 @@ const Welcoming = () => {
                     <LottieView source={require('./../../assets/Animation - 1710688901899.json')} style={welcomingStyles.lottie} autoPlay />
                 </View>
                 <View style={welcomingStyles.header}>
-                    <Text style={{ fontSize: 26.5, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
+                    <Text style={{ fontSize: 26, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
+                    <Text style={welcomingStyles.subHeaderText}>Découvrez une nouvelle ère d'apprentissage avec notre plateforme éducative en ligne</Text>
                 </View>
             </View>
         </Shapes>
@@ -47,8 +48,13 @@ const welcomingStyles = StyleSheet.create({
         width: width,
         display: "flex",
         gap: 20,
-        paddingLeft: 27,
-        paddingRight: 27
+        paddingLeft: 29,
+        paddingRight: 29
+    },
+    subHeaderText: {
+        fontSize: 13,
+        color: "#646060",
+        fontFamily: "Montserrat_500Medium"
     }
 })
 
