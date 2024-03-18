@@ -1,4 +1,4 @@
-import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Shapes from "../../components/auth-components/Shapes";
 import LottieView from 'lottie-react-native';
 import { useFonts, Montserrat_500Medium, Montserrat_700Bold, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat";
@@ -8,8 +8,6 @@ const Welcoming = () => {
     const [fontsLoaded] = useFonts({
         Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold
     });
-
-    const { blue, gray_01 } = colors();
 
     if (!fontsLoaded) {
         return <Text>Loading...</Text>;
@@ -22,8 +20,11 @@ const Welcoming = () => {
                     <LottieView source={require('./../../assets/Animation - 1710688901899.json')} style={welcomingStyles.lottie} autoPlay />
                 </View>
                 <View style={welcomingStyles.header}>
-                    <Text style={{ fontSize: 26, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
+                    <Text style={{ fontSize: 26, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
                     <Text style={welcomingStyles.subHeaderText}>Découvrez une nouvelle ère d'apprentissage avec notre plateforme éducative en ligne</Text>
+                    <TouchableOpacity style={welcomingStyles.button}>
+                        <Text style={welcomingStyles.buttonText}>Commencer à apprendre</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </Shapes>
@@ -41,21 +42,37 @@ const welcomingStyles = StyleSheet.create({
         gap: 20
     },
     lottie: {
-        height: 310,
+        height: 320,
         objectFit: "contain"
     },
     header: {
         width: width,
         display: "flex",
-        gap: 20,
-        paddingLeft: 29,
-        paddingRight: 29
+        gap: 28,
+        paddingHorizontal: 29
     },
     subHeaderText: {
         fontSize: 13,
         color: "#646060",
         fontFamily: "Montserrat_500Medium"
-    }
+    },
+    button: {
+        backgroundColor: colors.beige,
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "row",
+        justifyContent: "center",
+        height: 50.6,
+        borderRadius: 10
+    },
+    buttonText: {
+        color: "#000000",
+        fontSize: 13.5,
+        textAlign: "center",
+        fontFamily: "Montserrat_500Medium",
+    },
+
 })
 
 export default Welcoming;

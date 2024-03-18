@@ -1,8 +1,8 @@
-export default function colors() {
-    const blue = "#4385E7";
-    const beige = "#F2DEBF";
-    const green = "#14EB76";
-    const gray_01 = "#646060"
-
-    return { blue, beige, green, gray_01 }
+const colors = {
+    blue: "#4385E7",
+    beige: "#F2DEBF",
+    green: "#14EB76",
+    gray_01: "#646060"
 }
+
+export default colors;
