@@ -64,7 +64,7 @@ const welcomingStyles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         height: 48,
-        borderRadius: 10
+        borderRadius: constants.radius
     },
     buttonText: {
         color: "#000000",

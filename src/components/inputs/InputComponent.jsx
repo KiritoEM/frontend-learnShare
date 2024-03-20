@@ -1,15 +1,17 @@
 import { Fragment } from "react";
 import { StyleSheet, TextInput } from 'react-native';
+import constants from "../../helpers/data/constants";
 
-const InputComponent = ({ placeholder, name }) => {
+const InputComponent = ({ placeholder, name, type }) => {
     return (
         <Fragment>
             <TextInput
                 style={inputStyles.input}
-                onChangeText={onChangeNumber}
-                value={number}
-                placeholder="useless placeholder"
-                keyboardType="numeric"
+                placeholder={placeholder}
+                keyboardType={type === "default" ? "default" : type}
+                placeholderTextColor={constants.colors.gray_02}
+                secureTextEntry={type === "default" ? true : false}
+                autoCapitalize={'none'}
             />
         </Fragment>
     );
@@ -17,7 +19,9 @@ const InputComponent = ({ placeholder, name }) => {
 
 const inputStyles = StyleSheet.create({
     input: {
-        borderColor: ""
+        backgroundColor: constants.colors.gray_03,
+        padding: 12,
+        borderRadius: constants.radius,
     }
 })
 

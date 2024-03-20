@@ -15,8 +15,10 @@ const constants = {
         twoXl: 30
     },
     container: {
-        paddingHorizontal: 29
+        paddingHorizontal: 29,
     }
+    ,
+    radius: 10
 }
 
 export default constants;

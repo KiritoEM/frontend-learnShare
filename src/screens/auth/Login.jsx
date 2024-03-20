@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
 import constants from '../../helpers/data/constants';
+import InputComponent from '../../components/inputs/InputComponent';
 
 const Login = () => {
     return (
@@ -9,7 +10,8 @@ const Login = () => {
                 <Text style={loginStyles.title}>Accéder à votre compte <Text style={{ color: `${constants.colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare</Text></Text>
             </View>
             <View>
-
+                <InputComponent placeholder="Adresse email" type="email-address" />
+                <InputComponent placeholder="Mot de passe" type="default" />
             </View>
         </View>
     );
