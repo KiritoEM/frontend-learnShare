@@ -13,7 +13,7 @@ const Login = () => {
             <View style={loginStyles.form}>
                 <InputComponent placeholder="Adresse email" type="email-address" />
                 <InputComponent placeholder="Mot de passe" type="default" />
-                <Text style={{ color: `${constants.colors.gray_01}`, fontSize: constants.sizes.small, textAlign: "right" }}>Mot de passe oublié?</Text>
+                <Text style={{ color: `${constants.colors.gray_01}`, textAlign: "right", fontFamily: "Montserrat_500Medium" }}>Mot de passe oublié?</Text>
                 <TouchableOpacity style={loginStyles.button}>
                     <Text style={loginStyles.buttonText}>Se connecter</Text>
                 </TouchableOpacity>
@@ -42,7 +42,7 @@ const loginStyles = StyleSheet.create({
     form: {
         display: "flex",
         flexDirection: "column",
-        gap: 27
+        gap: 23
     },
     button: {
         backgroundColor: constants.colors.beige,
@@ -56,7 +56,6 @@ const loginStyles = StyleSheet.create({
     },
     buttonText: {
         color: "#000000",
-        fontSize: 13,
         textAlign: "center",
         fontFamily: "Montserrat_600SemiBold",
     },

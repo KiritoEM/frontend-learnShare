@@ -52,7 +52,6 @@ const welcomingStyles = StyleSheet.create({
         paddingHorizontal: constants.container.paddingHorizontal
     },
     subHeaderText: {
-        fontSize: 13,
         color: "#646060",
         fontFamily: "Montserrat_500Medium"
     },
@@ -68,7 +67,6 @@ const welcomingStyles = StyleSheet.create({
     },
     buttonText: {
         color: "#000000",
-        fontSize: 13,
         textAlign: "center",
         fontFamily: "Montserrat_600SemiBold",
     },
