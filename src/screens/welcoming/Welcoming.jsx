@@ -2,7 +2,7 @@ import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from "rea
 import Shapes from "../../components/auth-components/Shapes";
 import LottieView from 'lottie-react-native';
 import { useFonts, Montserrat_500Medium, Montserrat_700Bold, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat";
-import colors from "../../helpers/data/constants";
+import constants from "../../helpers/data/constants";
 
 const Welcoming = ({ navigation }) => {
     const [fontsLoaded] = useFonts({
@@ -20,7 +20,7 @@ const Welcoming = ({ navigation }) => {
                     <LottieView source={require('./../../assets/Animation - 1710688901899.json')} style={welcomingStyles.lottie} autoPlay />
                 </View>
                 <View style={welcomingStyles.header}>
-                    <Text style={{ fontSize: 25, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
+                    <Text style={{ fontSize: parseInt(`${constants.sizes.xl}`), fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${constants.colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
                     <Text style={welcomingStyles.subHeaderText}>Découvrez une nouvelle ère d'apprentissage avec notre plateforme éducative en ligne</Text>
                     <TouchableOpacity style={welcomingStyles.button} onPress={() => navigation.navigate('Login')}>
                         <Text style={welcomingStyles.buttonText}>Commencer à apprendre</Text>
@@ -49,7 +49,7 @@ const welcomingStyles = StyleSheet.create({
         width: width,
         display: "flex",
         gap: 28,
-        paddingHorizontal: 29
+        paddingHorizontal: constants.container.paddingHorizontal
     },
     subHeaderText: {
         fontSize: 13,
@@ -57,7 +57,7 @@ const welcomingStyles = StyleSheet.create({
         fontFamily: "Montserrat_500Medium"
     },
     button: {
-        backgroundColor: colors.beige,
+        backgroundColor: constants.colors.beige,
         width: "100%",
         display: "flex",
         alignItems: "center",

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import colors from '../../helpers/data/constants';
+import constants from '../../helpers/data/constants';
 
 const Login = () => {
     return (
         <View style={loginStyles.container}>
             <View>
-                <Text style={loginStyles.title}>Accéder à <Text style={{ color: `${colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
+                <Text style={loginStyles.title}>Accéder à votre compte <Text style={{ color: `${constants.colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare</Text></Text>
             </View>
         </View>
     );
@@ -22,7 +22,7 @@ const loginStyles = StyleSheet.create({
         display: "flex",
         justifyContent: "center",
         gap: 30,
-        paddingHorizontal: 29
+        paddingHorizontal: constants.container.paddingHorizontal
     },
     title: {
         fontSize: 25,

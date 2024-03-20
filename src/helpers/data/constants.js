@@ -11,6 +11,9 @@ const constants = {
         large: 20,
         xl: 25,
         twoXl: 30
+    },
+    container: {
+        paddingHorizontal: 29
     }
 }
 
