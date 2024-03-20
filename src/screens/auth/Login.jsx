@@ -8,6 +8,9 @@ const Login = () => {
             <View>
                 <Text style={loginStyles.title}>Accéder à votre compte <Text style={{ color: `${constants.colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare</Text></Text>
             </View>
+            <View>
+
+            </View>
         </View>
     );
 };
