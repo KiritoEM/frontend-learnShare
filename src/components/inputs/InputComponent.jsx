@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { StyleSheet, TextInput } from 'react-native';
+import { StyleSheet, Text, TextInput } from 'react-native';
 import constants from "../../helpers/data/constants";
 import { useFonts, Montserrat_400Regular, Montserrat_500Medium } from "@expo-google-fonts/montserrat";
 
@@ -7,6 +7,10 @@ const InputComponent = ({ placeholder, name, type }) => {
     const [fontsLoaded] = useFonts({
         Montserrat_500Medium
     });
+
+    if (!fontsLoaded) {
+        return <Text>Loading...</Text>
+    }
     return (
         <Fragment>
             <TextInput

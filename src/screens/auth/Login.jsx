@@ -12,7 +12,7 @@ const Login = () => {
             <View style={loginStyles.form}>
                 <InputComponent placeholder="Adresse email" type="email-address" />
                 <InputComponent placeholder="Mot de passe" type="default" />
-                <Text style={{ color: `${constants.colors.gray_01}` }}>Mot de passe oublié?</Text>
+                <Text style={{ color: `${constants.colors.gray_01}`, fontSize: constants.sizes.small, textAlign: "right" }}>Mot de passe oublié?</Text>
                 <TouchableOpacity style={loginStyles.button}>
                     <Text style={loginStyles.buttonText}>Se connecter</Text>
                 </TouchableOpacity>
