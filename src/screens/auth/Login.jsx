@@ -2,6 +2,7 @@ import React from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import constants from '../../helpers/data/constants';
 import InputComponent from '../../components/inputs/InputComponent';
+import GoogleAuth from '../../components/auth-components/GoogleAuth';
 
 const Login = () => {
     return (
@@ -17,6 +18,7 @@ const Login = () => {
                     <Text style={loginStyles.buttonText}>Se connecter</Text>
                 </TouchableOpacity>
             </View>
+            <GoogleAuth />
         </View>
     );
 };
@@ -30,7 +32,7 @@ const loginStyles = StyleSheet.create({
         backgroundColor: "#fff",
         display: "flex",
         justifyContent: "center",
-        gap: 30,
+        gap: 33,
         paddingHorizontal: constants.container.paddingHorizontal
     },
     title: {
