@@ -2,9 +2,9 @@ import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from "rea
 import Shapes from "../../components/auth-components/Shapes";
 import LottieView from 'lottie-react-native';
 import { useFonts, Montserrat_500Medium, Montserrat_700Bold, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat";
-import colors from "../../helpers/data/colors";
+import colors from "../../helpers/data/constants";
 
-const Welcoming = () => {
+const Welcoming = ({ navigation }) => {
     const [fontsLoaded] = useFonts({
         Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold
     });
@@ -20,9 +20,9 @@ const Welcoming = () => {
                     <LottieView source={require('./../../assets/Animation - 1710688901899.json')} style={welcomingStyles.lottie} autoPlay />
                 </View>
                 <View style={welcomingStyles.header}>
-                    <Text style={{ fontSize: 24.3, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
+                    <Text style={{ fontSize: 25, fontFamily: "Montserrat_600SemiBold" }}>Apprendre en ligne avec <Text style={{ color: `${colors.blue}`, fontFamily: "Montserrat_700Bold" }}>LearnShare!</Text></Text>
                     <Text style={welcomingStyles.subHeaderText}>Découvrez une nouvelle ère d'apprentissage avec notre plateforme éducative en ligne</Text>
-                    <TouchableOpacity style={welcomingStyles.button}>
+                    <TouchableOpacity style={welcomingStyles.button} onPress={() => navigation.navigate('Login')}>
                         <Text style={welcomingStyles.buttonText}>Commencer à apprendre</Text>
                     </TouchableOpacity>
                 </View>
@@ -39,7 +39,7 @@ const welcomingStyles = StyleSheet.create({
         backgroundColor: "#fff",
         display: "flex",
         justifyContent: "center",
-        gap: 20
+        gap: 30
     },
     lottie: {
         height: 305,
