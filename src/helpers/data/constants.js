@@ -8,7 +8,7 @@ const constants = {
         gray_03: "#F5F2F2"
     },
     sizes: {
-        small: 12,
+        small: 13,
         medium: 16,
         large: 20,
         xl: 25,

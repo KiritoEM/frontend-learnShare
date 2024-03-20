@@ -1,8 +1,12 @@
 import { Fragment } from "react";
 import { StyleSheet, TextInput } from 'react-native';
 import constants from "../../helpers/data/constants";
+import { useFonts, Montserrat_400Regular, Montserrat_500Medium } from "@expo-google-fonts/montserrat";
 
 const InputComponent = ({ placeholder, name, type }) => {
+    const [fontsLoaded] = useFonts({
+        Montserrat_500Medium
+    });
     return (
         <Fragment>
             <TextInput
@@ -20,9 +24,12 @@ const InputComponent = ({ placeholder, name, type }) => {
 const inputStyles = StyleSheet.create({
     input: {
         backgroundColor: constants.colors.gray_03,
-        padding: 12,
+        padding: 11,
+        height: 48,
+        fontSize: constants.sizes.small,
         borderRadius: constants.radius,
-    }
+        fontFamily: "Montserrat_500Medium"
+    },
 })
 
 export default InputComponent;

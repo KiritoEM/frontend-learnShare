@@ -9,9 +9,6 @@ const Welcoming = ({ navigation }) => {
         Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold
     });
 
-    if (!fontsLoaded) {
-        return <Text>Loading...</Text>;
-    }
 
     return (
         <Shapes>
