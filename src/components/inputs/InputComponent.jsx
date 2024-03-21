@@ -4,7 +4,7 @@ import constants from "../../helpers/data/constants";
 import { useFonts, Montserrat_500Medium } from "@expo-google-fonts/montserrat";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
-const InputComponent = ({ placeholder, name, type }) => {
+const InputComponent = ({ placeholder, name, type, maskIcon }) => {
     const [fontsLoaded] = useFonts({
         Montserrat_500Medium
     });
@@ -25,13 +25,13 @@ const InputComponent = ({ placeholder, name, type }) => {
                 placeholder={placeholder}
                 keyboardType={type === "default" ? "default" : type}
                 placeholderTextColor={constants.colors.gray_02}
-                secureTextEntry={type === "default" ? true : false}
+                secureTextEntry={type === "default" && hidePassword ? true : false}
                 autoCapitalize={'none'}
             />
-            <TouchableOpacity onPress={togglePasswordVisibility} style={inputStyles.iconContainer}>
+            {maskIcon && <TouchableOpacity onPress={togglePasswordVisibility} style={inputStyles.iconContainer}>
                 {/* <Ionicons name={hidePassword ? 'ios-eye-off' : 'ios-eye'} size={24} color="gray" /> */}
                 <FontAwesome name={hidePassword ? 'eye-slash' : 'eye'} size={20} color={constants.colors.gray_02} />
-            </TouchableOpacity>
+            </TouchableOpacity>}
         </View>
     );
 };
