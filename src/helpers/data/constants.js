@@ -4,7 +4,7 @@ const constants = {
         beige: "#F2DEBF",
         green: "#14EB76",
         gray_01: "#646060",
-        gray_02: "8B8888",
+        gray_02: "#8B8888",
         gray_03: "#F5F2F2"
     },
     sizes: {
